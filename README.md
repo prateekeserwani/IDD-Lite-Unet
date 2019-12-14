@@ -29,6 +29,9 @@ For directly create the conda virtual environemt please use the requirements.yml
 ```bash
 bash run.sh
 ```
+# Weights
+[https://drive.google.com/file/d/1yxCbStft75gTOriWQLGtqS_5l_OAvYnR/view?usp=sharing]
+
 # Testing procedure
 
 1. For single scale testing:
