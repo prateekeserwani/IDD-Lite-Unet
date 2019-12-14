@@ -8,7 +8,7 @@
 * matplotlib
 * pydensecrf
 
-For directly create the conda virtual environemt please use the requirements.yml 
+To directly create the conda virtual environemt please use the requirements.yml 
 
 
 # Training procedure 
