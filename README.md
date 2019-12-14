@@ -1,5 +1,16 @@
 # IDD-Lite-Unet
 
+# Requirement 
+
+* Pytorch=0.4
+* Visdom
+* Opencv
+* matplotlib
+* pydensecrf
+
+For directly create the conda virtual environemt please use the requirements.yml 
+
+
 # Training procedure 
 
 1. Download the dataset in a folder "dataset" and arrange the data in the following structure:
