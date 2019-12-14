@@ -25,6 +25,11 @@ For directly create the conda virtual environemt please use the requirements.yml
 │   │   ├── train
 │   │   ├── val
 ```
+
+2. Start the visdom server by the command 
+~~~bash
+python -m visdom.server
+~~~
 2. Execute the command 
 ```bash
 bash run.sh
