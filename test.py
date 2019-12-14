@@ -14,10 +14,10 @@ from matplotlib import pyplot as plt
 path='./dataset/'
 batch_size=1
 write_path = './result'
-weight_path='./weights/weights-475-0.288-0.288.pth'
+weight_path='./weights/weights-500-0.238-0.238.pth'
 
 def load_model(path=None):
-	model = tiramisu.FCDenseNet57(n_classes=8).cuda()
+	model = tiramisu.FCDenseNet103(n_classes=8).cuda()
 	weights = torch.load(path)
 	model.load_state_dict(weights['state_dict'])
 	return model

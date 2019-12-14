@@ -15,12 +15,12 @@ import torch.nn.functional as F
 path='./dataset/'
 batch_size=1
 write_path = './result_onlyt_ms'
-weight_path='./weights/weights-475-0.288-0.288.pth'
+weight_path='./weights/weights-500-0.238-0.238.pth'
 #scale_list=[0.65,0.75,1.0,1.25,1.5]
 scale_list=[0.75,1.0, 1.25]
 
 def load_model(path=None):
-	model = tiramisu.FCDenseNet57(n_classes=8).cuda()
+	model = tiramisu.FCDenseNet103(n_classes=8).cuda()
 	weights = torch.load(path)
 	model.load_state_dict(weights['state_dict'])
 	return model
