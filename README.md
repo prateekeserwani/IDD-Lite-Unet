@@ -35,3 +35,7 @@ python test_with_postprocessing.py
 
 # Visualization 
 
+Left side : predicted classes  :  Right side : Ground Truth 
+
+![Visualization during training](images/visual.png?raw=true "sample of generated data")
+
