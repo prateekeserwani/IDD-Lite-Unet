@@ -24,7 +24,7 @@ bash run.sh
 ```bash
 python test.py
 ```
-2. For multi-single scale testing:
+2. For multi-scale testing:
 ```bash
 python multiscale_testing.py
 ```
