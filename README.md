@@ -14,8 +14,22 @@
 │   │   ├── train
 │   │   ├── val
 ```
-2. execute the command 
+2. Execute the command 
 ```bash
 bash run.sh
+```
+# Testing procedure
+
+1. For single scale testing:
+```bash
+python test.py
+```
+2. For multi-single scale testing:
+```bash
+python multiscale_testing.py
+```
+3. For single scale testing with CRF post processing 
+```bash
+python test_with_postprocessing.py
 ```
 
