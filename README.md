@@ -50,3 +50,6 @@ Left side : predicted classes  :  Right side : Ground Truth
 
 ![Visualization during training](images/visual.png?raw=true "sample of generated data")
 
+# Acknowledgement
+One hundred layer Tiramisu [https://github.com/bfortuner/pytorch_tiramisu]
+
