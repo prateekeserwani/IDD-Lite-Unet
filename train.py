@@ -5,9 +5,9 @@ import torch.optim as optim
 from models import tiramisu
 import utils.training as train_utils
 from datagenerator_new import CustomDataset
-
+#gtFine_labelIds
 path='./dataset/'
-batch_size=4
+batch_size=1
 N_EPOCHS=500
 #phase='images/train'
 
@@ -18,7 +18,7 @@ torch.cuda.manual_seed(0)
 
 def load_model(path=None):
 	if path==None:
-		model = tiramisu.FCDenseNet103(n_classes=8).cuda()
+		model = tiramisu.FCDenseNet103(n_classes=30).cuda()
 	model.apply(train_utils.weights_init)
 	return model
 
@@ -36,22 +36,20 @@ for epoch in range(1, N_EPOCHS+1):
 
 	### Train ###
 	trn_loss = train_utils.train(model, train_loader, optimizer, epoch)
-	print('Epoch {:d}\nTrain - Loss: {:.4f}'.format(epoch, trn_loss))    
-	time_elapsed = time.time() - since  
+	print('Epoch {:d}\nTrain - Loss: {:.4f}'.format(epoch, trn_loss))
+	time_elapsed = time.time() - since
 	print('Train Time {:.0f}m {:.0f}s'.format(time_elapsed // 60, time_elapsed % 60))
 
 	'''
 	### Test ###
-	val_loss, val_err = train_utils.test(model, val_loader, criterion, epoch)    
+	val_loss, val_err = train_utils.test(model, val_loader, criterion, epoch)
 	print('Val - Loss: {:.4f} | Acc: {:.4f}'.format(val_loss, 1-val_err))
-	time_elapsed = time.time() - since  
+	time_elapsed = time.time() - since
 	print('Total Time {:.0f}m {:.0f}s\n'.format(time_elapsed // 60, time_elapsed % 60))
-	'''    
-	### Checkpoint ###   
-	if epoch%50==0: 
+	'''
+	### Checkpoint ###
+	if epoch%50==0:
 		train_utils.save_weights(model, epoch, trn_loss, trn_loss)
 
 	### Adjust Lr ###
 	train_utils.adjust_learning_rate(LR, LR_DECAY, optimizer, epoch, DECAY_EVERY_N_EPOCHS)
-
-
