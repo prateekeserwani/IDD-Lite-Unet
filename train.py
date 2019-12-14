@@ -18,7 +18,7 @@ torch.cuda.manual_seed(0)
 
 def load_model(path=None):
 	if path==None:
-		model = tiramisu.FCDenseNet57(n_classes=8).cuda()
+		model = tiramisu.FCDenseNet103(n_classes=8).cuda()
 	model.apply(train_utils.weights_init)
 	return model
 
