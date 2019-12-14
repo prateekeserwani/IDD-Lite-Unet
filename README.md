@@ -13,7 +13,7 @@ For directly create the conda virtual environemt please use the requirements.yml
 
 # Training procedure 
 
-1. Download the dataset in a folder "dataset" and arrange the data in the following structure:
+1. Download the dataset in a folder "dataset" and arrange the data in the following structure: Combine the training and validation dataset.
 
 ```bash
 ├── dataset
